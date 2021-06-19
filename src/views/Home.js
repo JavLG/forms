@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className={classNameMaker(styles['home'],'w-full h-full')}>
         <div className='py-10 w-full'>
-        <div className='text-2xl text-white tracking-wide'><h1 className={classNameMaker(styles['header-text'],'header-text w-full text-center')}>
+        <div className='text-2xl text-white tracking-wide'><h1 className={classNameMaker(styles['header-text'],'header-text w-full h-14 text-center')}>
         Welcome to WebForms! Lets start showcasing some tools!</h1></div>
         </div>
         <div>
