@@ -2,16 +2,16 @@ import { useState } from "react";
 
 import styles from "./forms.module.scss";
 import Input from "../components/Navbar/Input/Input";
+import Terminal from "../components/Terminal/Terminal";
+import Button from "../components/Button/Button";
 
 const Form1 = () => {
   const [formData, setFormData] = useState({});
 
-
-  function buildState(...args){
-    setFormData(prevState => {
-      
-      return { ...prevState, [args[1]]:args[0]}
-    })
+  function buildState(...args) {
+    setFormData((prevState) => {
+      return { ...prevState, [args[1]]: args[0] };
+    });
   }
 
   return (
@@ -34,135 +34,120 @@ const Form1 = () => {
                   inputStyle: "w-full px-5 text-gray-700 bg-gray-200 rounded",
                 }}
                 type="text"
-                label='Name'
-                name='name'
-                placeholder='Your name'
+                label="Name"
+                name="name"
+                placeholder="Your name"
                 onChange={buildState}
               />
-              
             </div>
             <div className="mt-2">
-            <Input
+              <Input
                 required={true}
                 styles={{
                   labelStyle: "block text-sm text-gray-600 mb-1",
                   inputStyle: "w-full px-5  text-gray-700 bg-gray-200 rounded",
                 }}
                 type="email"
-                label='Email'
-                name='email'
-                placeholder='Your email'
+                label="Email"
+                name="email"
+                placeholder="Your email"
                 onChange={buildState}
               />
-             
             </div>
             <div className="mt-2">
-         
-              <label
-                className=" block text-sm text-gray-600 mb-1"
-                htmlFor="cus_email"
-              >
-                Address
-              </label>
-              <input
-                className="w-full px-2  text-gray-700 bg-gray-200 rounded"
-                id="cus_email"
-                name="cus_email"
+              <Input
+                required={true}
+                styles={{
+                  labelStyle: "block text-sm text-gray-600 mb-1",
+                  inputStyle: "w-full px-5  text-gray-700 bg-gray-200 rounded",
+                }}
                 type="text"
-                required=""
-                placeholder="Street"
-                aria-label="Email"
+                label="Address"
+                name="address"
+                placeholder="Your address"
+                onChange={buildState}
               />
             </div>
             <div className="mt-2">
-              <label
-                className="text-sm block text-gray-600 mb-1"
-                htmlFor="cus_email"
-              >
-                City
-              </label>
-              <input
-                className="w-full px-2 text-gray-700 bg-gray-200 rounded"
-                id="cus_email"
-                name="cus_email"
+              <Input
+                required={true}
+                styles={{
+                  labelStyle: "block text-sm text-gray-600 mb-1",
+                  inputStyle: "w-full px-5  text-gray-700 bg-gray-200 rounded",
+                }}
                 type="text"
-                required=""
-                placeholder="City"
-                aria-label="Email"
+                label="City"
+                name="city"
+                placeholder="Your City"
+                onChange={buildState}
               />
             </div>
             <div className="inline-block mt-2 w-1/2 pr-1">
-              <label
-                className="block text-sm text-gray-600 mb-1"
-                htmlFor="cus_email"
-              >
-                Country
-              </label>
-              <input
-                className="w-full px-2  text-gray-700 bg-gray-200 rounded"
-                id="cus_email"
-                name="cus_email"
+              <Input
+                required={true}
+                styles={{
+                  labelStyle: "block text-sm text-gray-600 mb-1",
+                  inputStyle: "w-full px-2  text-gray-700 bg-gray-200 rounded",
+                }}
                 type="text"
-                required=""
-                placeholder="Country"
-                aria-label="Email"
+                label="Country"
+                name="country"
+                placeholder="Your Country"
+                onChange={buildState}
               />
             </div>
             <div className="inline-block mt-2 pl-1 w-1/2">
-              <label
-                className="block text-sm text-gray-600 mb-1"
-                htmlFor="cus_email"
-              >
-                Zip
-              </label>
-              <input
-                className="w-full px-2  text-gray-700 bg-gray-200 rounded"
-                id="cus_email"
-                name="cus_email"
+              <Input
+                required={true}
+                styles={{
+                  labelStyle: "block text-sm text-gray-600 mb-1",
+                  inputStyle: "w-full px-2  text-gray-700 bg-gray-200 rounded",
+                }}
                 type="text"
-                required=""
-                placeholder="Zip"
-                aria-label="Email"
+                label="Zip Code"
+                name="zip"
+                placeholder="Your Zip Code"
+                onChange={buildState}
               />
             </div>
             <p className="mt-4 text-gray-800 font-medium">
               Payment information
             </p>
             <div className="">
-              <label
-                className="block text-sm text-gray-600 mb-1"
-                htmlFor="cus_name"
-              >
-                Card
-              </label>
-              <input
-                className="w-full px-2  text-gray-700 bg-gray-200 rounded"
-                id="cus_name"
-                name="cus_name"
+              <Input
+                required={true}
+                styles={{
+                  labelStyle: "block text-sm text-gray-600 mb-1",
+                  inputStyle: "w-full px-2  text-gray-700 bg-gray-200 rounded",
+                }}
                 type="text"
-                required=""
-                placeholder="Card Number MM/YY CVC"
-                aria-label="Name"
+                label="Card Number"
+                name="creditcard"
+                placeholder="Your Credit Card Number (e.g. 4592 - XXXX - XXXX - XXXX)"
+                onChange={buildState}
               />
             </div>
             <div className="mt-4">
-              <button
-                className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
-                type="submit"
-              >
-                Search my Quotation
-              </button>
+              <Button
+                styles="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                onClick={() => alert(JSON.stringify(formData, null, 4))}
+                label="Search my Quotation"
+              />
             </div>
           </form>
         </div>
         <div className="w-2/3 md:w-1/2 h-full">
-          <div className="h-64 rounded-xl bg-gray-900 text-green-300 text-sm md:text-md px-5 py-3 m-4">
-            <div className="w-full flex justify-start mb-2">
-              <img className="w-10 h-3" src="./assets/buttons.png" alt="img" />
-            </div>
-            {JSON.stringify(formData, null, 4)}
-            
-          </div>
+        <h1 className={[styles["preview-header"],'tracking-wide'].join(' ')}>
+            Difficulty: ***
+          </h1>
+          <p className={styles["preview-text"]}>
+            Take a look at how State is being altered on realtime!
+          </p>
+          <p className={[styles["preview-subtext"], "text-gray-700"].join(" ")}>
+            Event handlers take responsibility to prompt new data to our State
+            Setter methods.
+          </p>
+          <Terminal state={formData} />
         </div>
       </div>
     </>
