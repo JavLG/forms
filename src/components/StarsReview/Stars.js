@@ -13,8 +13,8 @@ const Stars = ({score, total, styles, outline, count}) => {
         }
     }
     else {
-        for (var j = 0; j < total; j++) {
-            if(i < score){
+        for (var j = 0; j < score; j++) {
+            if(j < score){
                 qualification.push(<img className={styles.img} src="./assets/stars.png" alt="stars-review"/>);
             }
 
@@ -24,7 +24,7 @@ const Stars = ({score, total, styles, outline, count}) => {
 
     return (
         <div className={styles.div}>
-        {qualification.map(elem => elem)}
+        {qualification.map((elem, i) => <div key={`starsScore-${i}`}>{elem}</div>)}
         {count && <p className="text-sm text-gray-500 tracking-tight whitespace-nowrap">{score && total ? `${score} / ${total}`: {score}}</p>}
         </div>
     )

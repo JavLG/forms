@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "./forms.module.scss";
-import Input from "../components/Navbar/Input/Input";
+import Input from "../components/Input/Input";
 import Terminal from "../components/Terminal/Terminal";
 import Button from "../components/Button/Button";
 import Stars from "../components/StarsReview/Stars";
@@ -137,7 +137,7 @@ const Form1 = () => {
             </div>
           </form>
         </div>
-        <div className="w-11/12 md:w-1/2 h-full">
+        <div className="m-6 lg:m-7 lg:justify-start lg:mt-0 lg:w-1/2 w-full h-full">
           <h3 className={[styles["preview-title"], 'tracking-wide'].join(' ')}>Simple Hooks Form</h3>
           
 
@@ -150,8 +150,8 @@ const Form1 = () => {
                 count={true}
             />
           </div>
-          <div className="mx-7 my-2 pl-1 flex space-x-1">
-            <span role="img-tools" aria-label="tools">🛠</span>
+          <div className="mx-5 lg:mx-7 my-2 pl-1 flex space-x-1">
+            <span aria-label="tools">🛠</span>
             <p>React State and Hooks</p>
             </div>
           <p className={styles["preview-text"]}>

@@ -1,12 +1,12 @@
 
 import styles from './Home.module.scss';
-import Form1 from '../forms/form1';
+import Form2 from '../forms/form2';
 const classNameMaker = (...args) => {
   return args.join(' ')
 }
 
 
-const Home = () => {
+const FormikExample = () => {
   return (
     <div className={classNameMaker(styles['home'], 'w-full h-full')}>
       <div className='py-10 w-full'>
@@ -14,11 +14,11 @@ const Home = () => {
           Welcome to WebForms! Lets start showcasing some tools!</h1></div>
       </div>
       <div className="my-14">
-        <Form1 />
+        <Form2 />
         </div>
       </div>
 
   );
 };
 
-export default Home;
+export default FormikExample;

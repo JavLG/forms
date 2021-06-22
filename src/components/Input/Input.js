@@ -11,7 +11,6 @@ const Input = ({
   switch (type) {
     case "text":
     case "email":
-      console.log('tipado text o email')
       input = (
         <input
           className={inputStyle}

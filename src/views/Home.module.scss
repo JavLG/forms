@@ -4,14 +4,15 @@
 .header-text {
   font-size: 2.6rem;
   font-family: 'Raleway', sans-serif;
- 
+  line-height:2em;
   background: #1f2667;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
 
-  .home {
-    background-color: #debbff;
-  }
 
+
+body {
+  background-color: #debbff;
+}

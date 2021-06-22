@@ -22,15 +22,15 @@ const Navbar = () => {
                 <p className="mt-1 text-xl"> WebForms</p>
               </div>
             </Link>
-            <div className="links flex items-center justify-evenly mt-1 w-96 text-xl">
+            <div className="links flex items-center justify-evenly mt-1 mr-10 w-96 text-xl">
               <Link to="/">
-                <span>Home</span>
+                <span>Simple Form</span>
               </Link>
-              <Link to="/users">
-                <span>Users</span>
+              <Link to="/intermediate">
+                <span>Intermediate Form</span>
               </Link>
-              <Link to="/about">
-                <span>About</span>
+              <Link to="/advanced">
+                <span>Advanced Form</span>
               </Link>
             </div>
           </div>

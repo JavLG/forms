@@ -10,6 +10,7 @@ import {
 //Local Imports
 import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home';
+import FormikExample from './views/FormikExample';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
 
         <Switch>
           <Route path="/about" exact component={About} />
-          <Route path="/users" exact component={Users} />
+          <Route path="/intermediate" exact component={FormikExample} />
           <Route path="/" exact component={Home} />
         </Switch>
 
@@ -39,11 +40,6 @@ function About(){
   console.log("EN ABOUT");
   return <div><h6>About CONTAINER</h6></div>
 }
-function Users(){
-  console.log("EN USERS");
-  return <div><h6>Users CONTAINER</h6></div>
-}
-
 
 
 
