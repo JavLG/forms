@@ -133,6 +133,7 @@ const Form2 = () => {
               />
               {formik.touched.city && formik.errors.city ? <div className="text-red-600">{formik.errors.city}</div> : null}
             </div>
+            <div className="flex items-start">
             <div className="inline-block mt-2 w-1/2 pr-1">
               <FormikInput
                 required={true}
@@ -166,6 +167,7 @@ const Form2 = () => {
                 value={formik.values.zip}
               />
               {formik.touched.zip && formik.errors.zip ? <div className="text-red-600">{formik.errors.zip}</div> : null}
+            </div>
             </div>
             <p className="mt-4 text-gray-800 font-medium">
               Payment information
@@ -218,7 +220,7 @@ const Form2 = () => {
             <p>Formik</p>
             </div>
           <p className={styles["preview-text"]}>
-            What we've been doing with useState hooks is now managed by Formik!
+            What we've been doing with React's useState hook is now managed by Formik!
           </p>
           <p className={[styles["preview-subtext"], "text-gray-700"].join(" ")}>
             Event handlers take responsibility to prompt new data to our State
