@@ -4,9 +4,8 @@ import styles from "./forms.module.scss";
 import Input from "../components/Navbar/Input/Input";
 import Terminal from "../components/Terminal/Terminal";
 import Button from "../components/Button/Button";
-import Stars from "../components/StarsReview/Stars";
 
-const Form1 = () => {
+const Form2 = () => {
   const [formData, setFormData] = useState({});
 
   function buildState(...args) {
@@ -137,23 +136,10 @@ const Form1 = () => {
             </div>
           </form>
         </div>
-        <div className="w-11/12 md:w-1/2 h-full">
-          <h3 className={[styles["preview-title"], 'tracking-wide'].join(' ')}>Simple Hooks Form</h3>
-          
-
-          <div className='flex flex-row items-center'>
-            <h1 className={[styles["preview-header"], 'tracking-wide leading-tight '].join(' ')}>
-              Difficulty: </h1><Stars styles={{ "div":"h-6 w-full flex items-center space-x-2", "img": "h-5 w-5" }}
-                score={2}
-                total={5}
-                outline={true}
-                count={true}
-            />
-          </div>
-          <div className="mx-7 my-2 pl-1 flex space-x-1">
-            <span role="img-tools" aria-label="tools">🛠</span>
-            <p>React State and Hooks</p>
-            </div>
+        <div className="w-2/3 md:w-1/2 h-full">
+        <h1 className={[styles["preview-header"],'tracking-wide'].join(' ')}>
+            Difficulty: ***
+          </h1>
           <p className={styles["preview-text"]}>
             Take a look at how State is being altered on realtime!
           </p>
@@ -168,4 +154,4 @@ const Form1 = () => {
   );
 };
 
-export default Form1;
+export default Form2;
