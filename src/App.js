@@ -2,8 +2,6 @@
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
 } from "react-router-dom";
 
 
@@ -11,7 +9,7 @@ import {
 import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home';
 import FormikExample from './views/FormikExample';
-
+import { AnimatedRoutes, RouteTransition } from './ui/animations/RouteTransition';
 function App() {
   return (
 <>
@@ -20,11 +18,17 @@ function App() {
 <Navbar/>
 <div className='pt-14 w-full h-full'>
 
-        <Switch>
-          <Route path="/about" exact component={About} />
-          <Route path="/intermediate" exact component={FormikExample} />
-          <Route path="/" exact component={Home} />
-        </Switch>
+<AnimatedRoutes exitBeforeEnter initial={false}>
+          <RouteTransition path="/advanced" exact slideUp={40}>
+            <Home />
+          </RouteTransition>
+          <RouteTransition path="/intermediate" exact slideUp={40}>
+            <FormikExample />
+          </RouteTransition>
+          <RouteTransition path="/" exact slideUp={40} >
+            <Home />
+          </RouteTransition>
+</AnimatedRoutes>
 
 
 </div>
@@ -33,22 +37,6 @@ function App() {
 </>
   );
 }
-
-
-
-function About(){
-  console.log("EN ABOUT");
-  return <div><h6>About CONTAINER</h6></div>
-}
-
-
-
-
-
-
-
-
-
 
 
 

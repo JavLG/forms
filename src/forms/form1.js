@@ -16,10 +16,10 @@ const Form1 = () => {
   }
 
   return (
-    <>
+    <div id="main">
       <div className="leading-loose py-5 flex justify-center lg:justify-evenly items-center mx-3 md:mx-16 flex-wrap">
         <div className="">
-          <form
+          <form 
             className={[
               "max-w-xl m-4 p-10 bg-white rounded-lg shadow-xl",
               styles["form-container"],
@@ -164,7 +164,7 @@ const Form1 = () => {
           <Terminal state={formData} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
