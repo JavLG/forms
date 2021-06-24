@@ -1,6 +1,7 @@
 const FormikInput = ({
     type,
     label,
+    options,
     styles: { labelStyle, inputStyle },
     name,
     required = false,
@@ -37,6 +38,14 @@ const FormikInput = ({
             onChange={onChange}
           />
         );
+        break;
+
+      case "select":
+        
+        input = (<select className={inputStyle} required={required} id={label} name={name} onChange={onChange}>
+          <option value={null}>{placeholder}</option>
+          {options.map((option,k) => <option key={`opt-${k}`} value={option.value}>{option.text}</option>)}
+        </select>);
         break;
   
       default:

@@ -9,7 +9,13 @@ import {
 import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home';
 import FormikExample from './views/FormikExample';
+import FormikAndYupExample from './views/FormikAndYupExample'
 import { AnimatedRoutes, RouteTransition } from './ui/animations/RouteTransition';
+
+
+
+
+
 function App() {
   return (
 <>
@@ -20,7 +26,7 @@ function App() {
 
 <AnimatedRoutes exitBeforeEnter initial={false}>
           <RouteTransition path="/advanced" exact slideUp={40}>
-            <Home />
+            <FormikAndYupExample />
           </RouteTransition>
           <RouteTransition path="/intermediate" exact slideUp={40}>
             <FormikExample />
